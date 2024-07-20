@@ -36,7 +36,7 @@ class Controller extends BaseController
                 $details['email'] = $request->email;
                 $details['password'] = $request->password;
                 Mail::to($email)->send(new CustomMail($details));  
-                return redirect()->route('index.html');
+                return redirect()->route('index');
         } catch (Exception $e) {
             DB::rollBack();
             $reply = getErrorMessage($e, $e->getMessage());
