@@ -20,5 +20,5 @@ Route::post('/sendMail', [Controller::class, 'sendMail'])->name('sendMail');
 // path for final page
 Route::get('/final', function () {
     return view('final');
-})->name('index.htnl');
+})->name('index');
 
